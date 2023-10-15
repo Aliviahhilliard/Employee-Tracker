@@ -1,17 +1,22 @@
 // Import required npm modules
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
-const consoleTable = require('console.table');
-const util = require('util');
+const PORT = process.env.PORT || 3001;
+const app = express();
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Establish connection to MySQL database
-const connection = mysql.createConnection({
+const db = mysql.createConnection(
+  {
     host: 'localhost',
-    port: 3306,
     user: 'root',
     password: '<OM^5GBj8w#b*Tq>',
     database: 'employee_db',
-});
+  }
+  console.log(`Connected to the employee_db database.`)
+);
 
 // Connect to the MySQL server and database
 connection.connect((err) => {

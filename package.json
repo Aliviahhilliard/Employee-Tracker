@@ -1,6 +1,19 @@
 {
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "Employee Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "seed": "node seeds/seed.js"
+  },
+  "author": "Aliviah Hilliard",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "mysql": "^2.18.1"
+    "inquirer": "^8.2.6",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.2"
   }
 }
